@@ -1579,3 +1579,362 @@ footer {
   border-color: rgba(255, 255, 255, 0.22);
   color: var(--foreground);
 }
+
+/* POSTER CARDS (inline) */
+.poster-inner {
+  background: linear-gradient(160deg, #080f22 0%, #0d1b38 60%, #120828 100%);
+  padding: 40px 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 80% 0%,
+      rgba(0, 229, 255, 0.07) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 20% 100%,
+      rgba(168, 85, 247, 0.07) 0%,
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+.poster-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.poster-logo-badge {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--cyan-glow), var(--blue-glow));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster-logo-badge svg {
+  width: 20px;
+  height: 20px;
+  fill: #050a14;
+}
+
+.poster-logo-txt h4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--cyan-glow);
+  letter-spacing: 1.5px;
+}
+
+.poster-logo-txt p {
+  font-size: 10px;
+  color: var(--muted-fg);
+  margin-top: 1px;
+}
+
+.poster-event-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.poster-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.poster-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.poster-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.poster-info-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.poster-info-item label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.poster-info-item span {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--foreground);
+  display: block;
+}
+
+.poster-cta-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.poster-btn-main {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.poster-btn-close {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--muted-fg);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.poster-btn-close:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: var(--foreground);
+}
+
+/* Fun Run seminar colors */
+.poster-seminar .poster-event-label {
+  color: var(--green-glow);
+}
+
+.poster-seminar .poster-title {
+  background: linear-gradient(180deg, #fff 30%, var(--green-glow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.poster-seminar .poster-subtitle {
+  color: var(--green-glow);
+}
+
+.poster-seminar .poster-btn-main {
+  background: var(--green-glow);
+  color: #050a14;
+  box-shadow: 0 0 20px rgba(34, 211, 165, 0.4);
+}
+
+/* Fun Run poster colors */
+.poster-funrun .poster-event-label {
+  color: var(--green-glow);
+}
+
+.poster-funrun .poster-title {
+  background: linear-gradient(180deg, #fff 30%, var(--green-glow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.poster-funrun .poster-subtitle {
+  color: var(--green-glow);
+}
+
+.poster-funrun .poster-btn-main {
+  background: var(--green-glow);
+  color: #050a14;
+  box-shadow: 0 0 20px rgba(34, 211, 165, 0.4);
+}
+
+/* ML Tournament poster colors */
+.poster-ml .poster-event-label {
+  color: var(--purple-glow);
+}
+
+.poster-ml .poster-title {
+  background: linear-gradient(180deg, #fff 30%, var(--purple-glow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.poster-ml .poster-subtitle {
+  color: var(--purple-glow);
+}
+
+.poster-ml .poster-btn-main {
+  background: var(--purple-glow);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+/* SUCCESS STATE */
+.vote-success {
+  text-align: center;
+  padding: 18px 0;
+}
+
+.vote-success .check-icon {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.vote-success h4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
+  color: var(--cyan-glow);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.vote-success p {
+  color: var(--text-desc);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .kegiatan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vote-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+    background: var(--cyan-glow);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+    background: var(--cyan-glow);
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: rgba(5, 10, 20, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 12%;
+    transition: right 0.4s ease;
+    border-left: 1px solid rgba(0, 229, 255, 0.1);
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  nav ul li a {
+    font-size: 17px;
+  }
+
+  .info-meta-row {
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: none;
+    margin-bottom: 30px;
+  }
+
+  .info-divider {
+    display: none;
+  }
+
+  .action-buttons-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .btn-action {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .kegiatan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vote-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-tabs-group,
+  .filter-tabs-group {
+    gap: 8px;
+  }
+
+  .timeline-tab-btn,
+  .filter-tab-btn {
+    padding: 9px 18px;
+    font-size: 11px;
+  }
+
+  .poster-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
