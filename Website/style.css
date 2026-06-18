@@ -1937,4 +1937,537 @@ footer {
   .poster-info-grid {
     grid-template-columns: 1fr;
   }
+=======
+/* ==========================================================================
+   1. RESET & GLOBAL STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #FDFBFF; /* Background off-white dengan tint ungu soft */
+    color: #2D3748;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. NAVBAR STYLES
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(122, 51, 255, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background-color: #7A33FF;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 22px;
+    color: #7A33FF;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #666666;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #7A33FF;
+}
+
+/* ==========================================================================
+   3. HERO SECTION & COUNTDOWN
+   ========================================================================== */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.badge {
+    background-color: rgba(122, 51, 255, 0.08);
+    color: #7A33FF;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #38A169; /* Warna hijau indikator aktif */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #1A202C;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #4A5568;
+    margin-bottom: 35px;
+    max-width: 650px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #7A33FF;
+    color: white;
+    box-shadow: 0px 8px 20px rgba(122, 51, 255, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #6425E6;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #7A33FF;
+    border: 2px solid #7A33FF;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(122, 51, 255, 0.03);
+    transform: translateY(-2px);
+}
+
+/* Countdown */
+.countdown-container {
+    display: flex;
+    gap: 20px;
+}
+
+.countdown-box {
+    background-color: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 15px 25px;
+    min-width: 100px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.countdown-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #7A33FF;
+}
+
+.countdown-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #A0AEC0;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   4. ABOUT SECTION
+   ========================================================================== */
+.about-section {
+    padding: 60px 8%;
+    background-color: #ffffff;
+    border-top: 1px solid #F0EBF8;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    color: #4A5568;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.event-subtitle {
+    color: #718096;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   5. CARDS GRID SECTION (RANGKAIAN ACARA)
+   ========================================================================== */
+.cards-section {
+    padding: 40px 8% 80px 8%;
+}
+
+.grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Base Card Style */
+.card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(122, 51, 255, 0.05);
+}
+
+.card-body {
+    margin-bottom: 20px;
+}
+
+/* Icon Box Variations */
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-purple-solid {
+    background-color: #7A33FF;
+    color: #ffffff;
+}
+
+.icon-purple-light {
+    background-color: rgba(122, 51, 255, 0.08);
+    color: #7A33FF;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A202C;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #666666;
+    font-size: 14px;
+}
+
+.btn-detail {
+    background: none;
+    border: none;
+    color: #7A33FF;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    width: fit-content;
+}
+
+.btn-detail:hover {
+    color: #6425E6;
+}
+
+/* Full Width Card Modification */
+.full-width-card {
+    grid-column: span 2;
+}
+
+
+/* ==========================================================================
+   6. MODAL & REGISTER FORM STYLES
+   ========================================================================== */
+.modal {
+    display: none; /* Hidden secara default, diganti flex via JS */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 32, 44, 0.6); /* Gelap estetik */
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Animasi memantul halus saat modal terbuka */
+.modal-content-wrapper {
+    width: 100%;
+    max-width: 650px;
+    animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScaleUp {
+    from { opacity: 0; transform: scale(0.92) translateY(-15px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.register-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.12);
+    border-top: 8px solid #7A33FF;
+    padding: 40px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto; /* Supaya aman di layar hp pendek */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #A0AEC0;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: #E53E3E;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-header h1 {
+    color: #7A33FF;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.register-header p {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* Form Fields */
+.register-form-group {
+    margin-bottom: 22px;
+}
+
+.register-form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.register-form-row .register-form-group {
+    flex: 1;
+}
+
+.register-card label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #2D3748;
+    margin-bottom: 8px;
+}
+
+.register-card input, 
+.register-card select {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #2D3748;
+    outline: none;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.register-card input:focus, 
+.register-card select:focus {
+    border-color: #7A33FF;
+    box-shadow: 0 0 0 3px rgba(122, 51, 255, 0.15);
+}
+
+.register-card select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Wrapper Dropdown & Arrow Custom */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "\f078"; /* Kode FontAwesome chevron-down */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+    pointer-events: none;
+    font-size: 12px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #7A33FF;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+    box-shadow: 0px 6px 18px rgba(122, 51, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #6425E6;
+}
+
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .hero-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width-card {
+        grid-column: span 1;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .register-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+    .countdown-container {
+        gap: 10px;
+    }
+    .countdown-box {
+        min-width: 80px;
+        padding: 10px 15px;
+    }
 }
